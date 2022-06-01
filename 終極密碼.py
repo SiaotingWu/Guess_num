@@ -4,12 +4,16 @@
 # 猜錯要告訴使用者比答案大/小
 
 import random
+start = input('請決定範圍最小值： ')
+end = input('請決定範圍最大值： ')
+start = int(start)
+end = int(end)
 
-r = random.randint(1, 100)
+r = random.randint(start, end)
 count = 0 #為了計算猜幾次
 while True:
 	count += 1  # count = count + 1 
-	s = input('請猜數字(1~100)： ')
+	s = input('請猜數字: ' )
 	s = int(s)
 	if s == r:
 		print('恭喜猜對了！')
@@ -20,4 +24,3 @@ while True:
 	else:
 		print('比答案小')
 	print('這是你猜的第', count,'次')
-	
